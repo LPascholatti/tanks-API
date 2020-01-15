@@ -6,10 +6,9 @@ const tanksRouter = require("./tanks/router");
 const PORT = process.env.PORT || 4000;
 
 const app = express();
-const corsMiddleware = cors();
 const jsonParser = bodyParser.json();
 
-app.use(corsMiddleware);
+app.use(cors());
 app.use(jsonParser);
 app.use(tanksRouter);
 
